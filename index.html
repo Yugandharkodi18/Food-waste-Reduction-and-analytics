@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Waste Reduction</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Login Modal (Displayed on page load) -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <p>Please enter your phone number and your name.</p>
+      <form id="loginForm">
+        <input type="tel" placeholder="Phone Number" id="phoneNumber" required />
+        <input type="text" placeholder="Your Name" id="userName" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Profile Section (Full page view) -->
+  <div id="profileSection" class="section hidden">
+    <h2>Your Profile</h2>
+    <div id="profileInfo"></div>
+    <h3>Your Donations</h3>
+    <table id="profileTable">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Food Item</th>
+          <th>Quantity (kg)</th>
+          <th>Category</th>
+          <th>People Fed</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Donation rows for this user will be added here -->
+      </tbody>
+    </table>
+    <button id="closeProfileButton">Close Profile</button>
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Food Waste Reduction</h1>
+    <nav>
+      <button id="homeButton">Home</button>
+      <button id="donateButton">Donate Food</button>
+      <button id="insightsButton">Insights</button>
+      <button id="volunteerButton">Join as a Volunteer</button>
+      <button id="strategiesButton">Strategies &amp; Tips</button>
+    </nav>
+    <!-- User Profile display (clickable) -->
+    <div id="userProfile" class="user-profile" tabindex="0" title="Click to view your profile"></div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Help Combat World Hunger by Reducing Food Waste</h2>
+    <p>
+      Together, we can make a significant difference by reducing food waste.
+      Here's how you can contribute:
+    </p>
+    <!-- Replace with a valid image URL -->
+   <!-- <img src="foodimage5.jpg" alt="Delicious food and helping hands" class="hero-image" />-->
+   
+     
+  </div>
+
+  <!-- Donate Section -->
+  <div id="donateSection" class="section hidden">
+    <h2>Donate Food</h2>
+    <!-- Thank-you message appears above the form -->
+    <div id="donateResponse" class="response-message"></div>
+    <!-- Party/Confetti container -->
+    <div id="partyEffect" class="party-effect"></div>
+    <form id="donateForm">
+      <!-- Auto-filled from login (read-only) -->
+      <input type="text" placeholder="Your Name" id="donorName" required readonly />
+      <input type="text" placeholder="Food Item" id="foodItem" required />
+      <input type="number" placeholder="Quantity (kg)" id="quantity" required />
+      <!-- New field: Category -->
+      <select id="donationCategory" required>
+        <option value="">Select Category</option>
+        <option value="Household">Household</option>
+        <option value="Restaurant">Restaurant</option>
+        <option value="Grocery Store">Grocery Store</option>
+        <option value="Any Occasion">Any Occasion</option>
+      </select>
+      <!-- New field: People Fed -->
+      <input type="number" placeholder="People Fed" id="peopleFed" required />
+      <input type="text" placeholder="Location" id="donationLocation" required />
+      <button type="submit">Submit Donation</button>
+    </form>
+  </div>
+
+  <!-- Insights Section -->
+  <div id="insightsSection" class="section hidden">
+    <h2>Insights</h2>
+    <div class="insights-images">
+      <!-- Replace with chart images or illustrations -->
+      <img src="chart1.jpg" alt="Chart showing global food waste trends" class="insights-image" />
+      <img src="chart2.png" alt="Chart showing donation impact" class="insights-image" />
+    </div>
+    <div id="donorsList">
+      <h3>Recent Donations</h3>
+      <table id="donorsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Food Item</th>
+            <th>Quantity (kg)</th>
+            <th>Category</th>
+            <th>People Fed</th>
+            <th>Location</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- New donation rows will be appended here dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Volunteer Section -->
+  <div id="volunteerSection" class="section hidden">
+    <h2>Join as a Volunteer</h2>
+    <form id="volunteerForm">
+      <input type="text" placeholder="Your Name" id="volunteerName" required />
+      <input type="email" placeholder="Your Email" id="volunteerEmail" required />
+      <input type="text" placeholder="Your Location" id="volunteerLocation" required />
+      <button type="submit">Join</button>
+    </form>
+    <p id="volunteerResponse" class="response-message"></p>
+  </div>
+
+
+
+
+
+
+  <!-- Strategies & Tips Section -->
+<div id="strategiesSection" class="section hidden">
+    <h2>Strategies & Tips</h2>
+    <p>
+      Learn how you can reduce food waste at home, in restaurants, and at grocery stores:
+    </p>
+    <ul>
+      <li>
+        <img src="meal1.jpeg" alt="Meal Planning" class="strategy-img">
+        Plan your meals and buy only what you need.
+      </li>
+      <li>
+        <img src="meal2.jpeg" alt="Composting" class="strategy-img">
+        Compost food scraps to reduce landfill waste.
+      </li>
+      <li>
+        <img src="meal3.jpeg" alt="Donate Food" class="strategy-img">
+        Donate surplus food to local charities.
+      </li>
+      <li>
+        <img src="meal4.jpeg" alt="Repurpose Leftovers" class="strategy-img">
+        Repurpose leftovers creatively.
+      </li>
+    </ul>
+  </div>
+  
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Food Waste Reduction Initiative</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
